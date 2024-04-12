@@ -6,6 +6,10 @@ export default function App() {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, alignItems: "center", justifyContent:"center" }}>
 
+        <View style={styles.titleContainer}>
+          <Text style={styles.titleText}>... CALCULATOR ...</Text>
+        </View >
+
         <View style={styles.firstTestContainer}>
           <Text style={styles.firstText}>Calculate part</Text>
         </View >
@@ -86,15 +90,24 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+
+  titleContainer:{
+    marginBottom: 25,
+  },
+  titleText:{
+    fontSize:30,
+    color:"green",
+    fontWeight:"bold",
+  },
   firstTestContainer: {
-   
     marginBottom: 20,
   },
   firstText: {
     fontSize: 20,
+    fontStyle:"italic",
   },
   secondText: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: "bold",
   },
   ButtonContainer: {
