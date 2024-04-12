@@ -5,12 +5,15 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, alignItems: "center", justifyContent:"center" }}>
+
         <View style={styles.firstTestContainer}>
           <Text style={styles.firstText}>Calculate part</Text>
         </View >
+
         <View style={styles.firstTestContainer}>
           <Text style={styles.secondText}>Last value</Text>
         </View>
+
         <View style={styles.ButtonContainer}>
           <View style={styles.button}>
             <Button title='1'></Button>
@@ -22,6 +25,7 @@ export default function App() {
             <Button title='3'></Button>
           </View>
         </View>
+
         <View style={styles.ButtonContainer}>
           <View style={styles.button}>
             <Button title='4'></Button>
@@ -33,6 +37,7 @@ export default function App() {
             <Button title='6'></Button>
           </View>
         </View>
+
         <View style={styles.ButtonContainer}>
           <View style={styles.button}>
             <Button title='7'></Button>
@@ -44,6 +49,7 @@ export default function App() {
             <Button title='9'></Button>
           </View>
         </View>
+
         <View style={styles.ButtonContainer}>
           <View style={styles.button}>
             <Button title='0'></Button>
@@ -55,6 +61,7 @@ export default function App() {
             <Button title='+'></Button>
           </View>
         </View>
+
         <View style={styles.ButtonContainer}>
           <View style={styles.button}>
             <Button title='*'></Button>
@@ -66,10 +73,12 @@ export default function App() {
             <Button title='/'></Button>
           </View>
         </View>
+
         <View style={styles.ButtonContainer}>
           <View style={styles.button}>
             <Button title='='></Button>
           </View>
+          
         </View>
       </View>
     </SafeAreaView>
