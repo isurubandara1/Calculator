@@ -7,7 +7,7 @@ export default function App() {
       <View style={{ flex: 1, alignItems: "center", justifyContent:"center" }}>
 
         <View style={styles.titleContainer}>
-          <Text style={styles.titleText}>... CALCULATOR ...</Text>
+          <Text style={styles.titleText}>CALCULATOR</Text>
         </View >
 
         <View style={styles.firstTestContainer}>
@@ -93,10 +93,17 @@ const styles = StyleSheet.create({
 
   titleContainer:{
     marginBottom: 25,
+    backgroundColor:"green",
+    height:80,
+    borderRadius:10,
+    justifyContent:"center",
+    alignItems:"center",
+    width:"80%",
+    elevation:50,
   },
   titleText:{
     fontSize:30,
-    color:"green",
+    color:"white",
     fontWeight:"bold",
   },
   firstTestContainer: {
@@ -113,10 +120,11 @@ const styles = StyleSheet.create({
   ButtonContainer: {
     flexDirection: "row",
     marginBottom: 10,
+    
   },
   button: {
-    width: 80, 
-    height: 60,
+    width: 90, 
+    height: 50,
     marginHorizontal: 5, 
     
     
