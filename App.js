@@ -55,10 +55,10 @@ export default function App() {
             <Button title='0'></Button>
           </View>
           <View style={styles.button}>
-            <Button title='C'></Button>
+            <Button title='+'></Button>
           </View>
           <View style={styles.button}>
-            <Button title='+'></Button>
+            <Button title='-'></Button>
           </View>
         </View>
 
@@ -67,10 +67,10 @@ export default function App() {
             <Button title='*'></Button>
           </View>
           <View style={styles.button}>
-            <Button title='-'></Button>
+            <Button title='/'></Button>
           </View>
           <View style={styles.button}>
-            <Button title='/'></Button>
+            <Button title='C'></Button>
           </View>
         </View>
 
@@ -78,7 +78,7 @@ export default function App() {
           <View style={styles.button}>
             <Button title='='></Button>
           </View>
-          
+
         </View>
       </View>
     </SafeAreaView>
