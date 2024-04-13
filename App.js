@@ -6,6 +6,7 @@ export default function App() {
   const [firstOperand, setFirstOperand] = useState(null);
   const [operator, setOperator] = useState(null);
   const [waitingForSecondOperand, setWaitingForSecondOperand] = useState(false);
+  const [pressedCharacters, setPressedCharacters] = useState('');
 
   const handleInput = (input) => {
     if (input === 'C') {
@@ -17,10 +18,13 @@ export default function App() {
       } else {
         setDisplayValue(displayValue === '0' ? String(input) : displayValue + input);
       }
+      setPressedCharacters(prevCharacters => prevCharacters + input);
     } else if (input === '+' || input === '-' || input === '*' || input === '/') {
       handleOperator(input);
+      setPressedCharacters(prevCharacters => prevCharacters + input);
     } else if (input === '=') {
       performOperation();
+      setPressedCharacters(prevCharacters => prevCharacters + input);
     }
   };
 
@@ -29,6 +33,7 @@ export default function App() {
     setFirstOperand(null);
     setOperator(null);
     setWaitingForSecondOperand(false);
+    setPressedCharacters('');
   };
 
   const handleOperator = (nextOperator) => {
@@ -80,7 +85,7 @@ export default function App() {
           <Text style={styles.titleText}>CALCULATOR</Text>
         </View>
         <View style={styles.firstTestContainer}>
-          <Text style={styles.firstText}>Calculate part</Text>
+          <Text style={styles.firstText}>{pressedCharacters}</Text>
           <Text style={styles.secondText}>{displayValue}</Text>
         </View>
 
