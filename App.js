@@ -80,7 +80,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, alignItems: "center", justifyContent:"center" }}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent:"center", backgroundColor:"#55f2f2"}}>
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>CALCULATOR</Text>
         </View>
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    elevation: 3,
+    elevation: 10,
   },
   buttonText: {
     fontSize: 24,
