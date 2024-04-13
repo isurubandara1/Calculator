@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Button, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 export default function App() {
   const [displayValue, setDisplayValue] = useState('0');
@@ -90,69 +90,69 @@ export default function App() {
         </View>
 
         <View style={styles.ButtonContainer}>
-          <View style={styles.button}>
-            <Button title='1' onPress={() => handleInput('1')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='2' onPress={() => handleInput('2')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='3' onPress={() => handleInput('3')}></Button>
-          </View>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('1')}>
+            <Text style={styles.buttonText}>1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('2')}>
+            <Text style={styles.buttonText}>2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('3')}>
+            <Text style={styles.buttonText}>3</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.ButtonContainer}>
-          <View style={styles.button}>
-            <Button title='4' onPress={() => handleInput('4')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='5' onPress={() => handleInput('5')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='6' onPress={() => handleInput('6')}></Button>
-          </View>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('4')}>
+            <Text style={styles.buttonText}>4</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('5')}>
+            <Text style={styles.buttonText}>5</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('6')}>
+            <Text style={styles.buttonText}>6</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.ButtonContainer}>
-          <View style={styles.button}>
-            <Button title='7' onPress={() => handleInput('7')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='8' onPress={() => handleInput('8')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='9' onPress={() => handleInput('9')}></Button>
-          </View>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('7')}>
+            <Text style={styles.buttonText}>7</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('8')}>
+            <Text style={styles.buttonText}>8</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('9')}>
+            <Text style={styles.buttonText}>9</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.ButtonContainer}>
-          <View style={styles.button}>
-            <Button title='0' onPress={() => handleInput('0')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='+' onPress={() => handleInput('+')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='-' onPress={() => handleInput('-')}></Button>
-          </View>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('0')}>
+            <Text style={styles.buttonText}>0</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('+')}>
+            <Text style={styles.buttonText}>+</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('-')}>
+            <Text style={styles.buttonText}>-</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.ButtonContainer}>
-          <View style={styles.button}>
-            <Button title='*' onPress={() => handleInput('*')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='/' onPress={() => handleInput('/')}></Button>
-          </View>
-          <View style={styles.button}>
-            <Button title='C' onPress={() => handleInput('C')}></Button>
-          </View>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('*')}>
+            <Text style={styles.buttonText}>*</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('/')}>
+            <Text style={styles.buttonText}>/</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('C')}>
+            <Text style={styles.buttonText}>C</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.ButtonContainer}>
-          <View style={styles.button}>
-            <Button title='=' onPress={() => handleInput('=')}></Button>
-          </View>
+          <TouchableOpacity style={styles.button} onPress={() => handleInput('=')}>
+            <Text style={styles.buttonText}>=</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -178,10 +178,14 @@ const styles = StyleSheet.create({
   },
   firstTestContainer: {
     marginBottom: 20,
+   
   },
   firstText: {
     fontSize: 20,
     fontStyle:"italic",
+    color:"grey",
+    fontWeight:"bold",
+    
   },
   secondText: {
     fontSize: 30,
@@ -196,7 +200,15 @@ const styles = StyleSheet.create({
     width: 90, 
     height: 50,
     marginHorizontal: 5, 
-    
-    
+    backgroundColor: '#2196F3',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 3,
+  },
+  buttonText: {
+    fontSize: 24,
+    color: 'white',
+    fontWeight: 'bold'
   },
 });
