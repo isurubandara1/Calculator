@@ -80,10 +80,12 @@ export default function App() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+
       <View style={{ flex: 1, alignItems: "center", justifyContent:"center", backgroundColor:"#55f2f2"}}>
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>CALCULATOR</Text>
         </View>
+
         <View style={styles.firstTestContainer}>
           <Text style={styles.firstText}>{pressedCharacters}</Text>
           <Text style={styles.secondText}>{displayValue}</Text>
@@ -154,6 +156,7 @@ export default function App() {
             <Text style={styles.buttonText}>=</Text>
           </TouchableOpacity>
         </View>
+        
       </View>
     </SafeAreaView>
   );
